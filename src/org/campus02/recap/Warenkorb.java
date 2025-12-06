@@ -1,6 +1,7 @@
 package org.campus02.recap;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Warenkorb {
 
@@ -46,5 +47,31 @@ public class Warenkorb {
             }
         }
         return highestPrice;
+    }
+
+    // Finde alle Unique Artikel
+    // nur eindeutige Artikel retournieren
+    public ArrayList<Artikel> unique() {
+        ArrayList<Artikel> uniqueList = new ArrayList<>();
+
+        for (Artikel artikel : artikelListe) {
+            if (!uniqueList.contains(artikel)) {
+                uniqueList.add(artikel);
+            }
+        }
+
+        return uniqueList;
+    }
+
+    public HashSet<Artikel> unique2() {
+        HashSet<Artikel> uniqueSet = new HashSet<>();
+        for (Artikel artikel : artikelListe) {
+            uniqueSet.add(artikel);
+        }
+        return uniqueSet;
+    }
+
+    public HashSet<Artikel> unique3() {
+        return new HashSet<>(artikelListe);
     }
 }

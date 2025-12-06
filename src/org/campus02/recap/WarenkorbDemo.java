@@ -19,5 +19,9 @@ public class WarenkorbDemo {
 
         warenkorb.printArtikel();
         System.out.println(warenkorb.calculateSum());
+
+        System.out.println(warenkorb.unique());
+        System.out.println(warenkorb.unique2());
+        System.out.println(warenkorb.unique3());
     }
 }
